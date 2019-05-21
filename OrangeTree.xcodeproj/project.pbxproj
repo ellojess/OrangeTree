@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		C02631BA22920756006FCD00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02631B922920756006FCD00 /* AppDelegate.swift */; };
 		C02631BC22920756006FCD00 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C02631BB22920756006FCD00 /* GameScene.sks */; };
-		C02631BE22920756006FCD00 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C02631BD22920756006FCD00 /* Actions.sks */; };
 		C02631C022920756006FCD00 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02631BF22920756006FCD00 /* GameScene.swift */; };
 		C02631C222920756006FCD00 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02631C122920756006FCD00 /* GameViewController.swift */; };
 		C02631C522920756006FCD00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02631C322920756006FCD00 /* Main.storyboard */; };
 		C02631C722920758006FCD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02631C622920758006FCD00 /* Assets.xcassets */; };
 		C02631CA22920758006FCD00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02631C822920758006FCD00 /* LaunchScreen.storyboard */; };
+		C02631D222920BFA006FCD00 /* Smashing-Things.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C02631D122920BFA006FCD00 /* Smashing-Things.atlas */; };
+		C02631D422921904006FCD00 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02631D322921904006FCD00 /* Orange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C02631B622920756006FCD00 /* OrangeTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrangeTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02631B922920756006FCD00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C02631BB22920756006FCD00 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		C02631BD22920756006FCD00 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		C02631BF22920756006FCD00 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		C02631C122920756006FCD00 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C02631C422920756006FCD00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C02631C622920758006FCD00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02631C922920758006FCD00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02631CB22920758006FCD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02631D122920BFA006FCD00 /* Smashing-Things.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "Smashing-Things.atlas"; sourceTree = "<group>"; };
+		C02631D322921904006FCD00 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,12 @@
 		C02631B822920756006FCD00 /* OrangeTree */ = {
 			isa = PBXGroup;
 			children = (
+				C02631D122920BFA006FCD00 /* Smashing-Things.atlas */,
 				C02631B922920756006FCD00 /* AppDelegate.swift */,
 				C02631BB22920756006FCD00 /* GameScene.sks */,
-				C02631BD22920756006FCD00 /* Actions.sks */,
 				C02631BF22920756006FCD00 /* GameScene.swift */,
 				C02631C122920756006FCD00 /* GameViewController.swift */,
+				C02631D322921904006FCD00 /* Orange.swift */,
 				C02631C322920756006FCD00 /* Main.storyboard */,
 				C02631C622920758006FCD00 /* Assets.xcassets */,
 				C02631C822920758006FCD00 /* LaunchScreen.storyboard */,
@@ -131,11 +134,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02631D222920BFA006FCD00 /* Smashing-Things.atlas in Resources */,
 				C02631C522920756006FCD00 /* Main.storyboard in Resources */,
 				C02631BC22920756006FCD00 /* GameScene.sks in Resources */,
 				C02631C722920758006FCD00 /* Assets.xcassets in Resources */,
 				C02631CA22920758006FCD00 /* LaunchScreen.storyboard in Resources */,
-				C02631BE22920756006FCD00 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +152,7 @@
 				C02631C022920756006FCD00 /* GameScene.swift in Sources */,
 				C02631C222920756006FCD00 /* GameViewController.swift in Sources */,
 				C02631BA22920756006FCD00 /* AppDelegate.swift in Sources */,
+				C02631D422921904006FCD00 /* Orange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
