@@ -23,6 +23,9 @@ class GameScene: SKScene {
         shapeNode.lineCap = .round
         shapeNode.strokeColor = UIColor(white: 1, alpha: 0.3)
         addChild(shapeNode)
+        
+        // Set the contact delegate
+        physicsWorld.contactDelegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -64,8 +67,10 @@ class GameScene: SKScene {
         let location = touch.location(in: self)
         
         // Get the difference between the start and end point as a vector
-        let dx = touchStart.x - location.x
-        let dy = touchStart.y - location.y
+        // New code
+        let dx = (touchStart.x - location.x) * 0.5
+        let dy = (touchStart.y - location.y) * 0.5
+        
         let vector = CGVector(dx: dx, dy: dy)
         
         // Set the Orange dynamic again and apply the vector as an impulse
@@ -75,6 +80,27 @@ class GameScene: SKScene {
         // Remove the path from shapeNode
         shapeNode.path = nil
     }
-    
-    
 }
+
+extension GameScene: SKPhysicsContactDelegate {
+    // Called when the physicsWorld detects two nodes colliding
+    func didBegin(_ contact: SKPhysicsContact) {
+        let nodeA = contact.bodyA.node
+        let nodeB = contact.bodyB.node
+        
+        // Check that the bodies collided hard enough
+        if contact.collisionImpulse > 15 {
+            if nodeA?.name == "skull" {
+                removeSkull(node: nodeA!)
+            } else if nodeB?.name == "skull" {
+                removeSkull(node: nodeB!)
+            }
+        }
+    }
+    
+    // Function used to remove the Skull node from the scene
+    func removeSkull(node: SKNode) {
+        node.removeFromParent()
+    }
+}
+
