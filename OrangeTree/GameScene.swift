@@ -13,6 +13,13 @@ class GameScene: SKScene {
     var orange: Orange?
     var touchStart: CGPoint = .zero
     var shapeNode = SKShapeNode()
+    var boundary = SKNode()
+    var numOfLevels: UInt32 = 2
+    
+    // Class method to load .sks files
+    static func Load(level: Int) -> GameScene? {
+        return GameScene(fileNamed: "Level-\(level)")
+    }
     
     override func didMove(to view: SKView) {
         // Connect Game Objects
@@ -26,6 +33,19 @@ class GameScene: SKScene {
         
         // Set the contact delegate
         physicsWorld.contactDelegate = self
+        
+        // Setup the boundaries
+        boundary.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(origin: .zero, size: size))
+        boundary.position = .zero
+        addChild(boundary)
+        
+        // Add the Sun to the scene
+        let sun = SKSpriteNode(imageNamed: "Sun")
+        sun.name = "sun"
+        sun.position.x = size.width - (sun.size.width * 0.75)
+        sun.position.y = size.height - (sun.size.height * 0.75)
+        addChild(sun)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,6 +64,22 @@ class GameScene: SKScene {
             // Store the location of the touch
             touchStart = location
         }
+        
+        // Check whether the sun was tapped and change the level
+        for node in nodes(at: location) {
+            if node.name == "sun" {
+                let n = Int(arc4random() % numOfLevels + 1)
+                if let scene = GameScene.Load(level: n) {
+                    scene.scaleMode = .aspectFill
+                    if let view = view {
+                        view.presentScene(scene)
+                    }
+                }
+            }
+        }
+        
+        
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
