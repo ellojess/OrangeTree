@@ -14,7 +14,7 @@ class GameScene: SKScene {
     var touchStart: CGPoint = .zero
     var shapeNode = SKShapeNode()
     var boundary = SKNode()
-    var numOfLevels: UInt32 = 5
+    var numOfLevels: UInt32 = 6
     
     // Class method to load .sks files
     static func Load(level: Int) -> GameScene? {
@@ -23,7 +23,7 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         // Connect Game Objects
-        orangeTree = childNode(withName: "tree") as! SKSpriteNode
+        orangeTree = (childNode(withName: "tree") as! SKSpriteNode)
         
         // Configure shapeNode
         shapeNode.lineWidth = 20

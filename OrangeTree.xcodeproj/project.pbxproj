@@ -17,6 +17,7 @@
 		C02631D222920BFA006FCD00 /* Smashing-Things.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C02631D122920BFA006FCD00 /* Smashing-Things.atlas */; };
 		C02631D422921904006FCD00 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02631D322921904006FCD00 /* Orange.swift */; };
 		C02631D622990407006FCD00 /* Level-2.sks in Resources */ = {isa = PBXBuildFile; fileRef = C02631D522990407006FCD00 /* Level-2.sks */; };
+		C098375B229E10780004D551 /* Level-6.sks in Resources */ = {isa = PBXBuildFile; fileRef = C098375A229E10780004D551 /* Level-6.sks */; };
 		C0E6A744229A1F85000BB893 /* Level-3.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0E6A743229A1F85000BB893 /* Level-3.sks */; };
 		C0E6A746229A2B7C000BB893 /* Level-4.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0E6A745229A2B7C000BB893 /* Level-4.sks */; };
 		C0E6A748229A2BF8000BB893 /* Level-5.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0E6A747229A2BF8000BB893 /* Level-5.sks */; };
@@ -35,6 +36,7 @@
 		C02631D122920BFA006FCD00 /* Smashing-Things.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "Smashing-Things.atlas"; sourceTree = "<group>"; };
 		C02631D322921904006FCD00 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
 		C02631D522990407006FCD00 /* Level-2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-2.sks"; sourceTree = "<group>"; };
+		C098375A229E10780004D551 /* Level-6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-6.sks"; sourceTree = "<group>"; };
 		C0E6A743229A1F85000BB893 /* Level-3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-3.sks"; sourceTree = "<group>"; };
 		C0E6A745229A2B7C000BB893 /* Level-4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-4.sks"; sourceTree = "<group>"; };
 		C0E6A747229A2BF8000BB893 /* Level-5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-5.sks"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				C0E6A743229A1F85000BB893 /* Level-3.sks */,
 				C0E6A745229A2B7C000BB893 /* Level-4.sks */,
 				C0E6A747229A2BF8000BB893 /* Level-5.sks */,
+				C098375A229E10780004D551 /* Level-6.sks */,
 				C02631BF22920756006FCD00 /* GameScene.swift */,
 				C02631C122920756006FCD00 /* GameViewController.swift */,
 				C02631D322921904006FCD00 /* Orange.swift */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E6A748229A2BF8000BB893 /* Level-5.sks in Resources */,
+				C098375B229E10780004D551 /* Level-6.sks in Resources */,
 				C02631D222920BFA006FCD00 /* Smashing-Things.atlas in Resources */,
 				C02631C522920756006FCD00 /* Main.storyboard in Resources */,
 				C02631BC22920756006FCD00 /* Level-1.sks in Resources */,
